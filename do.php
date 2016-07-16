@@ -24,7 +24,7 @@ try
   }
   else
   {
-    throw new Exception("The action is not valid or [$action.php] file not exists. (action : [$action])");
+    throw new Exception("The action is not valid or [$action.php] file dose not exists. (action : [$action])");
   }
 }
 catch(Exception $e)
