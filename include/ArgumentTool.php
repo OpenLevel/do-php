@@ -22,7 +22,7 @@ class ArgumentTool
   public static function CheckPost()
   {
     foreach(func_get_args() as $arg)
-	  if(!isset($_POST[$arg]))
+      if(!isset($_POST[$arg]))
         throw new ArgumentException("Argument '$arg' is not set on POST variables.");
   }
   
@@ -36,8 +36,8 @@ class ArgumentTool
    */
   public static function CheckGet()
   {
-	foreach(func_get_args() as $arg)
-	  if(!isset($_GET[$arg]))
+    foreach(func_get_args() as $arg)
+      if(!isset($_GET[$arg]))
         throw new ArgumentException("Argument '$arg' is not set on GET variables.");
   }
   
@@ -51,8 +51,8 @@ class ArgumentTool
    */
   public static function Check()
   {
-	foreach(func_get_args() as $arg)
-	  if(!isset($_POST[$arg]) && !isset($_GET[$arg]))
+    foreach(func_get_args() as $arg)
+      if(!isset($_POST[$arg]) && !isset($_GET[$arg]))
         throw new ArgumentException("Argument '$arg' is not set on POST and GET variables.");
   }
 }
